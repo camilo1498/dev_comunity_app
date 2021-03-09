@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "312593762162",
+    "project_id": "devapp-7d710",
+    "storage_bucket": "devapp-7d710.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:312593762162:android:8684afe838ce52164c3feb",
+        "android_client_info": {
+          "package_name": "dev.camilo.dev_comunity_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "312593762162-a7nmqtlge5npss7ut2m3ts4g6te9gtbe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dev.camilo.dev_comunity_app",
+            "certificate_hash": "7f9aaa2c2b330120e53c8d61a9d5b5baadd315d7"
+          }
+        },
+        {
+          "client_id": "312593762162-rjlfult2p9t45hcutsrtf3khu6psld10.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4N1CBgwgxZ-fyb2Pj-wJORmXe8GuGjxs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "312593762162-rjlfult2p9t45hcutsrtf3khu6psld10.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

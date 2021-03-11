@@ -27,7 +27,7 @@ class LoginViewModel extends ChangeNotifier{
 
   Future logIn() async{
     try{
-      await _authenticationService.signInwithGoogle().then((user) {
+      await _authenticationService.signInWithGoogle().then((user) {
 
         if(user.uid != null){
           userName = user.displayName;

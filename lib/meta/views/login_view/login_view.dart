@@ -26,12 +26,12 @@ class LoginView extends StatelessWidget {
               )
             ]
         ),
-        body: _body(model),
+        body: _body(model, context),
       ),
     );
   }
 
-  Widget _body(LoginViewModel loginViewModel){
+  Widget _body(LoginViewModel loginViewModel, BuildContext context){
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -69,7 +69,7 @@ class LoginView extends StatelessWidget {
             iconData: FontAwesomeIcons.google,
             color: Colors.red,
             onPressed: (){
-
+              loginViewModel.navigateToHomeView(context: context);
             }
         ),
         vSizedBox3,

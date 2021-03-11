@@ -1,9 +1,12 @@
 import 'package:dev_comunity_app/app/providers/providers.dart';
 import 'package:dev_comunity_app/meta/views/login_view/login_view.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+Future<void> main() async{
+  await Firebase.initializeApp();
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }
 

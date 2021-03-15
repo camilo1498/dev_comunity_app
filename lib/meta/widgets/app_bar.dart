@@ -9,7 +9,16 @@ Widget appBar({
   return AppBar(
     backgroundColor: bgColor,
     leading: leadingWidget,
-    title: Text(titleText),
+    title: Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(4),
+        color: bgColorFaint,
+      ),
+      child: Padding(
+        padding: EdgeInsets.all(8),
+        child: Text(titleText),
+      )
+    ),
     actions: actions
   );
 }

@@ -23,7 +23,8 @@ class VideoView extends StatelessWidget {
               } else{
                 return _listOfVideos(
                   querySnapshot: snapshot,
-                  context: context
+                  context: context,
+                  videoViewModel: model
                 );
               }
             },
@@ -33,26 +34,25 @@ class VideoView extends StatelessWidget {
     );
   }
 
-  Widget _listOfVideos({dynamic querySnapshot, BuildContext context}) {
+  Widget _listOfVideos({dynamic querySnapshot, BuildContext context, VideoViewModel videoViewModel}) {
     return Scrollbar(
       controller: scrollController,
       isAlwaysShown: false,
       child: ListView(
         children: querySnapshot.data.docs
             .map((documentSnapshot) => blockOfVideo(
-                context: context,
-
+                context: context, documentSnapshot: documentSnapshot, videoViewModel: videoViewModel
         ))
             .toList(),
       ),
     );
   }
 
-  Widget blockOfVideo({BuildContext context, DocumentSnapshot documentSnapshot}) {
+  Widget blockOfVideo({BuildContext context, DocumentSnapshot documentSnapshot, VideoViewModel videoViewModel}) {
     var _size = MediaQuery.of(context).size;
     return GestureDetector(
       onTap: (){
-
+        videoViewModel.navigateToDetails(context, documentSnapshot);
       },
       child: Container(
         child: Column(
